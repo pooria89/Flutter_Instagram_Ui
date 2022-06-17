@@ -1,7 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../../screen/home_screen.dart';
+import 'package:pooria50/screen/login_screen.dart';
 
 class SplashWidget extends StatelessWidget {
   const SplashWidget({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class SplashWidget extends StatelessWidget {
       duration: 1000,
       splash: 'asset/splash.png',
       splashIconSize: double.infinity,
-      nextScreen: const HomeScreen(),
+      nextScreen: const LoginScreen(),
       splashTransition: SplashTransition.decoratedBoxTransition,
     );
   }
