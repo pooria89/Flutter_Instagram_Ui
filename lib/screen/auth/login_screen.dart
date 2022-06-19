@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../data/sql_helper.dart';
+import '../../data/sql_helper.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -36,8 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 "Welcome Back",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.bebasNeue(fontSize: 25.0,color: Colors.black54
-                ),
+                style: GoogleFonts.bebasNeue(
+                    fontSize: 25.0, color: Colors.black54),
               ),
               SizedBox(height: 20),
               Padding(
