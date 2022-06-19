@@ -8,12 +8,33 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+
+  // void _navigateBottomTabBar(int index) {
+  //   setState()
+  //   ){
+  //   _selectedIndex = index;
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        "salam Fateemeeeee ",
-        style: TextStyle(color: Colors.blue),
+    return Scaffold(
+      body: Center(
+        child: Text("Salam"),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        onTap: _navigateBottomTabBar,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.heart_broken_rounded), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "home"),
+        ],
       ),
     );
   }
