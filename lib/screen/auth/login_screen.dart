@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/screen/home_screen.dart';
+import 'package:pooria50/screen/main_screen.dart';
 
 import '../../helper/sql_helper.dart';
 
@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      body: const HomeScreen(),
+      body: const MainScreen(),
       // SafeArea(
       //     child: Center(
       //   child: SingleChildScrollView(
