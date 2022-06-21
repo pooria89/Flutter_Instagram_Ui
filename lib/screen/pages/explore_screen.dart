@@ -9,12 +9,11 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 1,
-        backgroundColor: Colors.transparent,
+        elevation: 0,
+        backgroundColor: Colors.grey[200],
         title: ClipRRect(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(10),
           child: Container(
-            color: Colors.grey[300],
             padding: EdgeInsets.all(10.0),
             child: Row(
               children: [

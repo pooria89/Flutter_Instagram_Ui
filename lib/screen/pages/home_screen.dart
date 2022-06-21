@@ -12,9 +12,18 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
-        title: Text(
-          "Timeline",
-          style: GoogleFonts.bebasNeue(fontSize: 20, color: Colors.black87),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "Timeline",
+              style: GoogleFonts.bebasNeue(fontSize: 25, color: Colors.black87),
+            ),
+            Icon(
+              Icons.send,
+              color: Colors.grey[800],
+            )
+          ],
         ),
       ),
       body: Column(
