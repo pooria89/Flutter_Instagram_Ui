@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pooria50/widget/main/bubble_storiesWidget.dart';
-import 'package:pooria50/widget/main/post_Widget.dart';
+
+import '../../util/main/bubble_stories.dart';
+import '../../util/main/user_post.dart';
 
 class HomeScreen extends StatelessWidget {
   final List people = ["pooria", "qazal", "mamad", "alireza", "leila", "saba"];
@@ -13,11 +14,12 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.grey[300],
         title: Text(
           "Timeline",
-          style: GoogleFonts.bebasNeue(fontSize: 30, color: Colors.black87),
+          style: GoogleFonts.bebasNeue(fontSize: 20, color: Colors.black87),
         ),
       ),
       body: Column(
         children: [
+          //Story
           Container(
             height: 130,
             child: ListView.builder(
@@ -27,6 +29,7 @@ class HomeScreen extends StatelessWidget {
                   return BubbleStories(name: people[index]);
                 }),
           ),
+          // Post
           Expanded(
               child: ListView.builder(
             itemCount: people.length,

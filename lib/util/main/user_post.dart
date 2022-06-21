@@ -11,7 +11,7 @@ class PostWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(5.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -44,9 +44,9 @@ class PostWidget extends StatelessWidget {
           color: Colors.grey[300],
         ),
         Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(Icons.favorite),
               SizedBox(
@@ -61,18 +61,20 @@ class PostWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 1.0),
           child: Row(
             children: [
               Text(
                 "Liked by ",
-                style:
-                    GoogleFonts.bebasNeue(fontSize: 18, color: Colors.black87),
+                style: GoogleFonts.bebasNeue(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87),
               ),
               Text(
                 "Pooria ",
                 style:
-                    GoogleFonts.bebasNeue(fontSize: 16, color: Colors.black87),
+                    GoogleFonts.bebasNeue(fontSize: 15, color: Colors.black87),
               ),
             ],
           ),

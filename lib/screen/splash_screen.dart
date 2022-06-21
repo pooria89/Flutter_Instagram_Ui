@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/widget/authentication/splashWidget.dart';
+
+import '../util/authentication/splashWidget.dart';
 
 void main() {
   runApp(const MyApp());
