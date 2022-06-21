@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ExploreGrid extends StatefulWidget {
-  const ExploreGrid({Key? key}) : super(key: key);
+  final String imageUrl;
+
+  ExploreGrid({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
   State<ExploreGrid> createState() => _ExploreGridState();
@@ -18,7 +20,10 @@ class _ExploreGridState extends State<ExploreGrid> {
           padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 3.0),
           child: Container(
             child: Container(
-              color: Colors.purple[100],
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(widget.imageUrl), fit: BoxFit.fill),
+              ),
             ),
           ),
         );

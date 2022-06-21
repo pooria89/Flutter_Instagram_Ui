@@ -21,9 +21,11 @@ class PostWidget extends StatelessWidget {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.grey[400],
-                    ),
+                        shape: BoxShape.circle,
+                        color: Colors.grey[400],
+                        image: DecorationImage(
+                            image: AssetImage("asset/3.jpg"),
+                            fit: BoxFit.fill)),
                   ),
                   SizedBox(
                     width: 10,
@@ -40,28 +42,39 @@ class PostWidget extends StatelessWidget {
           ),
         ),
         Container(
-          height: 400,
-          color: Colors.grey[300],
-        ),
+            height: 400,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("asset/1.jpeg"), fit: BoxFit.fill),
+            )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(Icons.favorite),
+              Icon(
+                Icons.favorite,
+                color: Colors.red,
+              ),
               SizedBox(
                 width: 10,
               ),
-              Icon(Icons.chat_bubble_outline),
+              Icon(
+                Icons.chat_bubble_outline,
+                color: Colors.grey[700],
+              ),
               SizedBox(
                 width: 10,
               ),
-              Icon(Icons.share),
+              Icon(
+                Icons.share,
+                color: Colors.grey[700],
+              ),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 1.0),
+          padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
           child: Row(
             children: [
               Text(

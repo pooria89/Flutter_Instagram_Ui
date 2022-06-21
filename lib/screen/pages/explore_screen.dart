@@ -32,7 +32,7 @@ class ExploreScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: ExploreGrid(),
+      body: ExploreGrid(imageUrl: "asset/1.jpeg"),
     );
   }
 }
