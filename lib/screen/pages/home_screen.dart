@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../util/main/bubble_stories.dart';
-import '../../util/main/user_post.dart';
+import '../../widget/main/bubble_stories.dart';
+import '../../widget/main/user_post.dart';
 
 class HomeScreen extends StatelessWidget {
   final List people = ["pooria", "qazal", "mamad", "alireza", "leila", "saba"];

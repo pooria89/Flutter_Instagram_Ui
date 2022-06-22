@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pooria50/screen/auth/register_screen.dart';
 import 'package:pooria50/screen/main_screen.dart';
 
 import '../../helper/sql_helper.dart';
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 15),
               GestureDetector(
                 onTap: () {
-                  signIn();
+                  // signIn();
                   Navigator.push(
                     context,
                     PageRouteBuilder(
@@ -115,7 +116,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   SizedBox(width: 5),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (c, a1, a2) => RegisterScreen(),
+                          transitionsBuilder: (c, anim, a2, child) =>
+                              FadeTransition(opacity: anim, child: child),
+                          transitionDuration: Duration(milliseconds: 1500),
+                        ),
+                      );
+                    },
                     child: Text("register now ",
                         style: GoogleFonts.bebasNeue(
                             fontSize: 20, color: Colors.red)),
@@ -129,19 +140,10 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  void insertDb(String username, String password) async {
-    SQLHelper.insert(username, password);
-    print(
-        'user have been saved => "username :$username "," "password : $password');
-  }
 
   void getUsers() async {
     final rows = await SQLHelper.getItems();
     print('query all rows');
     rows.forEach(print);
-  }
-
-  void signIn() {
-    insertDb(_usernameController.text, _passwordController.text);
   }
 }

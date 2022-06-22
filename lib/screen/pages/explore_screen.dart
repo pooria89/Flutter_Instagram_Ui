@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../util/main/explore_grid.dart';
+import '../../widget/main/explore_grid.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({Key? key}) : super(key: key);

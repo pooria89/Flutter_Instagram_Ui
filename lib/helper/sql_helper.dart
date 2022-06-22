@@ -10,6 +10,7 @@ class SQLHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         username TEXT,
         password TEXT,
+        neighbourhood TEXT,
         createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
       )
       """);
@@ -28,10 +29,15 @@ class SQLHelper {
   /**
    * create Item = Insert
    */
-  static Future<int> insert(String username, String password) async {
+  static Future<int> insert(
+      String username, String password, String neighbourhood) async {
     final db = await SQLHelper.db();
 
-    final data = {'username': username, 'password': password};
+    final data = {
+      'username': username,
+      'password': password,
+      'neighbourhood': neighbourhood
+    };
     final id = await db.insert('users', data,
         conflictAlgorithm: sql.ConflictAlgorithm.replace);
     return id;
@@ -59,12 +65,13 @@ class SQLHelper {
    * Update
    */
   static Future<int> updateItem(
-      int id, String username, String password) async {
+      int id, String username, String password, String neighbourhood) async {
     final db = await SQLHelper.db();
 
     final data = {
       'username': username,
       'password': password,
+      'neighbourhood': neighbourhood,
       'createdAt': DateTime.now().toString()
     };
 
