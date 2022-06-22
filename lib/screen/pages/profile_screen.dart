@@ -14,7 +14,7 @@ class ProfileScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Instagram",
+            "Instagrammmmmmm",
             style: GoogleFonts.bebasNeue(
               fontSize: 35,
               fontWeight: FontWeight.bold,
