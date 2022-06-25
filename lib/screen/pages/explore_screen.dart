@@ -9,29 +9,23 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.grey[200],
-        title: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Container(
-            padding: EdgeInsets.all(10.0),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  color: Colors.grey[700],
-                ),
-                Container(child: TextField(
-                  onTap: () {
-                    print('Search');
-                  },
-                ))
-              ],
+        backgroundColor: Colors.grey[300],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "Explore ... ",
+              style: TextStyle(
+                  fontSize: 20, color: Colors.black87, fontFamily: 'BNazanin'),
             ),
-          ),
+            Icon(
+              Icons.search,
+              color: Colors.grey[800],
+            )
+          ],
         ),
       ),
-      body: ExploreGrid(imageUrl: "asset/1.jpeg"),
+      body: ExploreGrid(imageUrl: "asset/234.png"),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BubbleStories extends StatelessWidget {
   final String name;
@@ -27,8 +26,8 @@ class BubbleStories extends StatelessWidget {
           ),
           Text(
             name,
-            style: GoogleFonts.bebasNeue(fontSize: 20, color: Colors.black87),
-          ),
+              style: TextStyle(
+                  fontSize: 16, color: Colors.black87, fontFamily: 'BNazanin')),
         ],
       ),
     );

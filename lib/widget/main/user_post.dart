@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class PostWidget extends StatelessWidget {
   final String name;
@@ -24,17 +23,18 @@ class PostWidget extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: Colors.grey[400],
                         image: DecorationImage(
-                            image: AssetImage("asset/3.jpg"),
+                            image: AssetImage("asset/123.png"),
                             fit: BoxFit.fill)),
                   ),
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    "pooria",
-                    style: GoogleFonts.bebasNeue(
-                        fontSize: 20, color: Colors.black87),
-                  ),
+                  Text("pooria",
+                      style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black87,
+                          fontFamily: 'BNazanin',
+                          fontWeight: FontWeight.bold)),
                 ],
               ),
               Icon(Icons.menu),
@@ -45,7 +45,7 @@ class PostWidget extends StatelessWidget {
             height: 400,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("asset/1.jpeg"), fit: BoxFit.fill),
+                  image: AssetImage("asset/234.png"), fit: BoxFit.fill),
             )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
@@ -77,18 +77,17 @@ class PostWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
           child: Row(
             children: [
-              Text(
-                "Liked by ",
-                style: GoogleFonts.bebasNeue(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87),
-              ),
-              Text(
-                "Pooria ",
-                style:
-                    GoogleFonts.bebasNeue(fontSize: 15, color: Colors.black87),
-              ),
+              Text("Liked by ",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                      fontFamily: 'BNazanin')),
+              Text("Pooria ",
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black87,
+                      fontFamily: 'BNazanin')),
             ],
           ),
         )

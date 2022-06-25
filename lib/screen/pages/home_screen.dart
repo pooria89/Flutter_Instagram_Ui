@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../widget/main/bubble_stories.dart';
 import '../../widget/main/user_post.dart';
@@ -15,10 +14,11 @@ class HomeScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "Timeline",
-              style: GoogleFonts.bebasNeue(fontSize: 25, color: Colors.black87),
-            ),
+            Text("Timeline",
+                style: TextStyle(
+                    fontSize: 19,
+                    color: Colors.black87,
+                    fontFamily: 'BNazanin')),
             Icon(
               Icons.send,
               color: Colors.grey[800],
