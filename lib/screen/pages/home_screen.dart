@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
+        elevation: 0.0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -40,12 +41,13 @@ class HomeScreen extends StatelessWidget {
           ),
           // Post
           Expanded(
-              child: ListView.builder(
-            itemCount: people.length,
-            itemBuilder: (context, index) {
-              return PostWidget(name: people[index]);
-            },
-          ))
+            child: ListView.builder(
+              itemCount: people.length,
+              itemBuilder: (context, index) {
+                return PostWidget(name: people[index]);
+              },
+            ),
+          )
         ],
       ),
     );
