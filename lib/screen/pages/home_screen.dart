@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: people.length,
                 itemBuilder: (context, index) {
-                  return BubbleStories(name: people[index]);
+                  return BubbleStories();
                 }),
           ),
           // Post

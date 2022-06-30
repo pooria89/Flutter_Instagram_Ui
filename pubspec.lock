@@ -71,6 +71,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  dashed_circle:
+    dependency: "direct main"
+    description:
+      name: dashed_circle
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -84,7 +91,7 @@ packages:
       name: ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   file:
     dependency: transitive
     description:
@@ -164,7 +171,7 @@ packages:
       name: page_transition
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.7"
+    version: "2.0.9"
   path:
     dependency: transitive
     description:
@@ -185,7 +192,7 @@ packages:
       name: path_provider_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.15"
+    version: "2.0.16"
   path_provider_ios:
     dependency: transitive
     description:

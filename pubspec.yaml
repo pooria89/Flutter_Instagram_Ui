@@ -34,6 +34,7 @@ dependencies:
   sqflite:
   animated_text_kit:
   searchfield:
+  dashed_circle:  ^0.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -83,9 +84,9 @@ flutter:
       # "family" key with the font family name, and a "fonts" key with a
       # list giving the asset and other descriptors for the font. For
     # example:
-  fonts:
-    - family: BNazanin
-      fonts:
+#  fonts:
+#    - family: BNazanin
+#      fonts:
   #        - asset: font/B-NAZANIN.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
