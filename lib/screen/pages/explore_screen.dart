@@ -9,6 +9,7 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.grey[300],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

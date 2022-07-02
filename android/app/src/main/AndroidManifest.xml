@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pooria50">
-   <application
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
         android:label="pooria50"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

@@ -10,18 +10,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.grey[300],
         elevation: 0.0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Timeline",
+            Text("Instagram",
                 style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 22,
                     color: Colors.black87,
                     fontFamily: 'BNazanin')),
             Icon(
               Icons.send,
+              size: 25.0,
               color: Colors.grey[800],
             )
           ],

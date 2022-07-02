@@ -140,7 +140,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-
   void getUsers() async {
     final rows = await SQLHelper.getItems();
     print('query all rows');
