@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:pooria50/widget/main/mini_bubble_stories.dart';
 
 final List<String> imagesList = [
   "https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg",
@@ -168,6 +169,9 @@ class _PostWidgetState extends State<PostWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
           child: Row(
             children: [
+              MiniBubbleStories(username: "", url: imagesList.first),
+              MiniBubbleStories(username: "", url: imagesList[1]),
+              MiniBubbleStories(username: "", url: imagesList[2]),
               Text("Liked by ",
                   style: TextStyle(
                       fontSize: 15,
