@@ -2,7 +2,10 @@ import 'package:dashed_circle/dashed_circle.dart';
 import 'package:flutter/material.dart';
 
 class BubbleStories extends StatefulWidget {
-  const BubbleStories({Key? key}) : super(key: key);
+  late String username, url;
+
+  BubbleStories({Key? key, required this.username, required this.url})
+      : super(key: key);
 
   @override
   State<BubbleStories> createState() => _BubbleStoriesState();
@@ -10,10 +13,6 @@ class BubbleStories extends StatefulWidget {
 
 class _BubbleStoriesState extends State<BubbleStories>
     with SingleTickerProviderStateMixin {
-  // final String name;
-  //
-  // BubbleStories({required this.name});
-
   late Animation<double> gap;
   late Animation<double> base;
   late Animation<double> reverse;
@@ -60,30 +59,20 @@ class _BubbleStoriesState extends State<BubbleStories>
                       padding: const EdgeInsets.all(5.0),
                       child: CircleAvatar(
                         radius: 80.0,
-                        backgroundImage: NetworkImage(
-                            'https://wallpaperaccess.com/full/3174207.jpg'),
+                        backgroundImage: NetworkImage(widget.url),
                       ),
                     ),
                   ),
                 ),
-              )
-              // Container(
-              //   width: 70,
-              //   height: 70,
-              //   decoration: BoxDecoration(
-              //       shape: BoxShape.circle,
-              //       color: Colors.grey[400],
-              //       image: DecorationImage(
-              //         image: AssetImage("asset/1.jpeg"),
-              //       )),
-              // ),
-              // SizedBox(
-              //   height: 5,
-              // ),
-              // Text(name,
-              //     style: TextStyle(
-              //         fontSize: 16, color: Colors.black87, fontFamily: 'BNazanin')),
-              ),
+              )),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(widget.username,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black87,
+                    fontFamily: 'BNazanin')),
+          ),
         ],
       ),
     );

@@ -36,7 +36,10 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: people.length,
                 itemBuilder: (context, index) {
-                  return BubbleStories();
+                  return BubbleStories(
+                    username: "pooria",
+                    url: "https://wallpaperaccess.com/full/3174207.jpg",
+                  );
                 }),
           ),
           // Post
