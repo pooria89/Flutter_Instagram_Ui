@@ -17,13 +17,11 @@ class _ExploreGridState extends State<ExploreGrid> {
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 3.0),
+          padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 2.0),
           child: Container(
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(widget.imageUrl), fit: BoxFit.fill),
-              ),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(widget.imageUrl), fit: BoxFit.fill),
             ),
           ),
         );

@@ -78,49 +78,51 @@ class _PostWidgetState extends State<PostWidget> {
         ),
         Column(
           children: [
-            CarouselSlider(
-              options: CarouselOptions(
-                  height: 300,
-                  autoPlay: false,
-                  onPageChanged: (index, reason) {
-                    setState(
-                      () {
-                        _currentIndex = index;
-                      },
-                    );
-                  }),
-              items: imagesList
-                  .map(
-                    (item) => Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Card(
-                        margin: EdgeInsets.only(
-                          top: 10.0,
-                          bottom: 2.0,
-                        ),
-                        elevation: 3.0,
-                        shadowColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(2.0),
+            GestureDetector(
+              child: CarouselSlider(
+                options: CarouselOptions(
+                    height: 300,
+                    autoPlay: false,
+                    onPageChanged: (index, reason) {
+                      setState(
+                        () {
+                          _currentIndex = index;
+                        },
+                      );
+                    }),
+                items: imagesList
+                    .map(
+                      (item) => Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Card(
+                          margin: EdgeInsets.only(
+                            top: 10.0,
+                            bottom: 2.0,
                           ),
-                          child: Stack(
-                            children: <Widget>[
-                              Image.network(
-                                item,
-                                fit: BoxFit.cover,
-                                width: double.nan,
-                              ),
-                            ],
+                          elevation: 3.0,
+                          shadowColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(2.0),
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Image.network(
+                                  item,
+                                  fit: BoxFit.cover,
+                                  width: double.nan,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                  .toList(),
+                    )
+                    .toList(),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
