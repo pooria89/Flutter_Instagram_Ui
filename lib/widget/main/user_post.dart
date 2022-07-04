@@ -41,31 +41,32 @@ class _PostWidgetState extends State<PostWidget> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 50,
+                    height: 50,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.grey[400],
+                        color: Colors.grey[800],
                         image: DecorationImage(
                             image: AssetImage("asset/123.png"),
                             fit: BoxFit.fill)),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 5,
                   ),
-                  Text("pooria",
-                      style: TextStyle(
-                          fontSize: 19,
-                          color: Colors.black87,
-                          fontFamily: 'BNazanin',
-                          fontWeight: FontWeight.bold)),
+                  Text(
+                    "cafegardi_tehran",
+                    style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin'),
+                  ),
                 ],
               ),
               Icon(
@@ -79,6 +80,7 @@ class _PostWidgetState extends State<PostWidget> {
           children: [
             CarouselSlider(
               options: CarouselOptions(
+                  height: 300,
                   autoPlay: false,
                   onPageChanged: (index, reason) {
                     setState(
@@ -96,14 +98,14 @@ class _PostWidgetState extends State<PostWidget> {
                           top: 10.0,
                           bottom: 2.0,
                         ),
-                        elevation: 6.0,
-                        shadowColor: Colors.grey,
+                        elevation: 3.0,
+                        shadowColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10.0),
+                            Radius.circular(2.0),
                           ),
                           child: Stack(
                             children: <Widget>[
@@ -125,14 +127,14 @@ class _PostWidgetState extends State<PostWidget> {
               children: imagesList.map((urlOfItem) {
                 int index = imagesList.indexOf(urlOfItem);
                 return Container(
-                  width: 10.0,
-                  height: 10.0,
+                  width: 7.0,
+                  height: 7.0,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: _currentIndex == index
-                        ? Color.fromRGBO(0, 0, 0, 0.8)
-                        : Color.fromRGBO(0, 0, 0, 0.3),
+                        ? Color.fromRGBO(0, 0, 0, 0.2)
+                        : Color.fromRGBO(0, 0, 0, 0.1),
                   ),
                 );
               }).toList(),
@@ -140,12 +142,13 @@ class _PostWidgetState extends State<PostWidget> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(
                 Icons.favorite,
+                size: 25,
                 color: Colors.red,
               ),
               SizedBox(
@@ -153,6 +156,7 @@ class _PostWidgetState extends State<PostWidget> {
               ),
               Icon(
                 Icons.chat_bubble_outline,
+                size: 25,
                 color: Colors.grey[700],
               ),
               SizedBox(
@@ -160,27 +164,31 @@ class _PostWidgetState extends State<PostWidget> {
               ),
               Icon(
                 Icons.share,
+                size: 25,
                 color: Colors.grey[700],
               ),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Row(
             children: [
-              MiniBubbleStories(username: "", url: imagesList.first),
-              MiniBubbleStories(username: "", url: imagesList[1]),
-              MiniBubbleStories(username: "", url: imagesList[2]),
+              MiniBubbleStories(url: imagesList.first),
+              MiniBubbleStories(url: imagesList[1]),
+              MiniBubbleStories(url: imagesList[2]),
+              SizedBox(
+                width: 5,
+              ),
               Text("Liked by ",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                       fontFamily: 'BNazanin')),
-              Text("Pooria ",
+              Text("Cafegardi_tehran ",
                   style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 17,
                       color: Colors.black87,
                       fontFamily: 'BNazanin')),
             ],
