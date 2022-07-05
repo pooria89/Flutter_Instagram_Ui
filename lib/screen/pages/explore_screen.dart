@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../widget/custom_textview.dart';
 import '../../widget/main/explore_grid.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -27,10 +28,11 @@ class ExploreScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "Explore ... ",
-              style: TextStyle(
-                  fontSize: 20, color: Colors.black87, fontFamily: 'BNazanin'),
+            CustomTextView(
+              text: "Explore ...",
+              size: 20,
+              color: Colors.black,
+              fontFamily: 'BNazanin',
             ),
             Icon(
               Icons.search,

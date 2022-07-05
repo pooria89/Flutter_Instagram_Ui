@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pooria50/widget/main/mini_bubble_stories.dart';
 
+import '../custom_textview.dart';
+
 final List<String> imagesList = [
   "https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg",
   "https://cdn.pixabay.com/photo/2016/11/18/19/00/breads-1836411_1280.jpg",
@@ -60,12 +62,11 @@ class _PostWidgetState extends State<PostWidget> {
                   SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    "cafegardi_tehran",
-                    style: TextStyle(
-                        fontSize: 17,
-                        color: Colors.black87,
-                        fontFamily: 'BNazanin'),
+                  CustomTextView(
+                    text: "cafegardi_tehran",
+                    size: 17,
+                    color: Colors.black,
+                    fontFamily: 'BNazanin',
                   ),
                 ],
               ),
@@ -182,17 +183,18 @@ class _PostWidgetState extends State<PostWidget> {
               SizedBox(
                 width: 5,
               ),
-              Text("Liked by ",
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                      fontFamily: 'BNazanin')),
-              Text("Cafegardi_tehran ",
-                  style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.black87,
-                      fontFamily: 'BNazanin')),
+              CustomTextView(
+                text: "Liked by ",
+                size: 18,
+                color: Colors.black,
+                fontFamily: 'BNazanin',
+              ),
+              CustomTextView(
+                text: "Cafegardi_tehran",
+                size: 17,
+                color: Colors.black,
+                fontFamily: 'BNazanin',
+              ),
             ],
           ),
         )

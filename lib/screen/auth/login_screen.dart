@@ -4,6 +4,7 @@ import 'package:pooria50/screen/auth/register_screen.dart';
 import 'package:pooria50/screen/main_screen.dart';
 
 import '../../helper/sql_helper.dart';
+import '../../widget/custom_textview.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -35,11 +36,12 @@ class _LoginScreenState extends State<LoginScreen> {
               Text("Hello Dear  ",
                   style: GoogleFonts.bebasNeue(fontSize: 48.0)),
               SizedBox(height: 10),
-              Text(
-                "Welcome Back",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.bebasNeue(
-                    fontSize: 25.0, color: Colors.black54),
+              CustomTextView(
+                text: "Welcome Back",
+                size: 25,
+                color: Colors.black,
+                fontFamily: 'BNazanin',
+                fontWeight: FontWeight.bold,
               ),
               SizedBox(height: 20),
               Padding(
@@ -99,9 +101,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.deepPurple,
                         borderRadius: BorderRadius.circular(12)),
                     child: Center(
-                      child: Text("Sign in",
-                          style: GoogleFonts.bebasNeue(
-                              fontSize: 30, color: Colors.white)),
+                      child: CustomTextView(
+                        text: "Sign in",
+                        size: 30,
+                        color: Colors.white,
+                        fontFamily: 'BNazanin',
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -110,9 +116,12 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "not a member",
-                    style: GoogleFonts.bebasNeue(fontSize: 20),
+                  CustomTextView(
+                    text: "not a member",
+                    size: 20,
+                    color: Colors.black87,
+                    fontFamily: 'BNazanin',
+                    fontWeight: FontWeight.bold,
                   ),
                   SizedBox(width: 5),
                   GestureDetector(
@@ -127,9 +136,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     },
-                    child: Text("register now ",
-                        style: GoogleFonts.bebasNeue(
-                            fontSize: 20, color: Colors.red)),
+                    child: CustomTextView(
+                      text: "register now ",
+                      size: 20,
+                      color: Colors.red,
+                      fontFamily: 'BNazanin',
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),

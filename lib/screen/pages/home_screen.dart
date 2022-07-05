@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../widget/custom_textview.dart';
 import '../../widget/main/bubble_stories.dart';
 import '../../widget/main/user_post.dart';
 
@@ -40,11 +41,13 @@ class HomeScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Instagram",
-                style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.black87,
-                    fontFamily: 'BNazanin')),
+            CustomTextView(
+              text: "Instagram",
+              size: 22,
+              color: Colors.black87,
+              fontFamily: 'BNazanin',
+              fontWeight: FontWeight.bold,
+            ),
             Icon(
               Icons.send,
               size: 25.0,

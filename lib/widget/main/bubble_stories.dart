@@ -1,6 +1,8 @@
 import 'package:dashed_circle/dashed_circle.dart';
 import 'package:flutter/material.dart';
 
+import '../custom_textview.dart';
+
 class BubbleStories extends StatefulWidget {
   late String username, url;
 
@@ -66,12 +68,13 @@ class _BubbleStoriesState extends State<BubbleStories>
                 ),
               )),
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(widget.username,
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black87,
-                    fontFamily: 'BNazanin')),
+            padding: const EdgeInsets.all(4.0),
+            child: CustomTextView(
+              text: widget.username,
+              size: 16,
+              color: Colors.black,
+              fontFamily: 'BNazanin',
+            ),
           ),
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../custom_textview.dart';
+
 class ActivityNews extends StatelessWidget {
   const ActivityNews({Key? key}) : super(key: key);
 
@@ -23,23 +25,21 @@ class ActivityNews extends StatelessWidget {
                     )),
               ),
             ),
-            Text(
-              'pooria45',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'BNazanin'),
+            CustomTextView(
+              text: "Cafegardi_tehran",
+              size: 16,
+              color: Colors.black,
+              fontFamily: 'BNazanin',
+              fontWeight: FontWeight.bold,
             ),
             SizedBox(
               width: 5,
             ),
-            Text(
-              'liked your post.',
-              style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 14,
-                  fontFamily: 'BNazanin'),
+            CustomTextView(
+              text: "liked your post.",
+              size: 14,
+              color: Colors.grey[700],
+              fontFamily: 'BNazanin',
             ),
           ],
         ),

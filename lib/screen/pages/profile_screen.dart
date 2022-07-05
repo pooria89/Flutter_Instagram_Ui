@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/widget/normal_textview.dart';
+import 'package:pooria50/widget/custom_textview.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
@@ -25,10 +25,11 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 1.0,
         centerTitle: true,
-        title: Text(
-          "Cafegardi_tehran",
-          style: TextStyle(
-              fontSize: 18, color: Colors.black87, fontFamily: 'BNazanin'),
+        title: CustomTextView(
+          text: "Cafegardi_tehran",
+          size: 18,
+          color: Colors.black87,
+          fontFamily: 'BNazanin',
         ),
       ),
       body: Column(
@@ -46,58 +47,52 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text(
-                        "30",
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: Colors.black87,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "30",
+                        size: 17,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        "Posts",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.black87,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "Posts",
+                        size: 15,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
                       ),
                     ],
                   ),
                   Column(
                     children: [
-                      Text(
-                        "365",
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "526",
+                        size: 17,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        "Followers",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.black87,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "Followers",
+                        size: 15,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
                       ),
                     ],
                   ),
                   Column(
                     children: [
-                      Text(
-                        "9862",
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "43875",
+                        size: 17,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        "Followers",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.black87,
-                            fontFamily: 'BNazanin'),
+                      CustomTextView(
+                        text: "Following",
+                        size: 15,
+                        color: Colors.black87,
+                        fontFamily: 'BNazanin',
                       ),
                     ],
                   ),
@@ -108,21 +103,19 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
             child: Column(
               children: [
-                Text(
-                  "آشنایی با انواع کافه و رستوران های شهر تهران",
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'BNazanin'),
+                CustomTextView(
+                  text: "آشنایی با انواع کافه و رستوران های شهر تهران",
+                  size: 15,
+                  color: Colors.black87,
+                  fontFamily: 'BNazanin',
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  "اولین و تخصصی ترین پیج کافه گردی تهران",
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'BNazanin'),
+                CustomTextView(
+                  text: "اولین و تخصصی ترین پیج کافه گردی تهران",
+                  size: 15,
+                  color: Colors.black87,
+                  fontFamily: 'BNazanin',
+                  fontWeight: FontWeight.bold,
                 ),
               ],
             ),
@@ -139,12 +132,12 @@ class ProfileScreen extends StatelessWidget {
                         40), // fromHeight use double.infinity as width and 40 is the height
                   ),
                   onPressed: () {},
-                  child: Text(
-                    'Edit Profile',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+                  child: CustomTextView(
+                    text: "Edit Profile",
+                    size: 16,
+                    color: Colors.white,
+                    fontFamily: 'BNazanin',
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Row(
@@ -158,13 +151,12 @@ class ProfileScreen extends StatelessWidget {
                               side: BorderSide(color: Colors.grey),
                               borderRadius: BorderRadius.circular(4.0)),
                           onPressed: () {},
-                          child: Text(
-                            "Promotion",
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'BNazanin'),
+                          child: CustomTextView(
+                            text: "Promotion",
+                            size: 15,
+                            color: Colors.black87,
+                            fontFamily: 'BNazanin',
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -178,13 +170,12 @@ class ProfileScreen extends StatelessWidget {
                               side: BorderSide(color: Colors.grey),
                               borderRadius: BorderRadius.circular(4.0)),
                           onPressed: () {},
-                          child: Text(
-                            "Insight",
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'BNazanin'),
+                          child: CustomTextView(
+                            text: "Insight",
+                            size: 15,
+                            color: Colors.black87,
+                            fontFamily: 'BNazanin',
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -197,20 +188,19 @@ class ProfileScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(4.0)),
                         color: Colors.white,
                         onPressed: () {},
-                        child: Text(
-                          "Contact",
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.black87,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'BNazanin'),
+                        child: CustomTextView(
+                          text: "Contact",
+                          size: 15,
+                          color: Colors.black87,
+                          fontFamily: 'BNazanin',
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       flex: 1,
                     ),
                   ],
                 ),
-                NormalTextView(
+                CustomTextView(
                   text: "salam",
                   onClick: () {},
                 )
