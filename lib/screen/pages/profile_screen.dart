@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pooria50/widget/normal_textview.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
@@ -125,9 +126,97 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
           // highlight story
-
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
+            child: Column(
+              children: [
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shadowColor: Colors.grey,
+                    minimumSize: Size.fromHeight(
+                        40), // fromHeight use double.infinity as width and 40 is the height
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'Edit Profile',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 2, 0),
+                        child: FlatButton(
+                          shape: RoundedRectangleBorder(
+                              side: BorderSide(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(4.0)),
+                          onPressed: () {},
+                          child: Text(
+                            "Promotion",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'BNazanin'),
+                          ),
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 2, 0),
+                        child: FlatButton(
+                          shape: RoundedRectangleBorder(
+                              side: BorderSide(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(4.0)),
+                          onPressed: () {},
+                          child: Text(
+                            "Insight",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'BNazanin'),
+                          ),
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: FlatButton(
+                        shape: RoundedRectangleBorder(
+                            side: BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(4.0)),
+                        color: Colors.white,
+                        onPressed: () {},
+                        child: Text(
+                          "Contact",
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'BNazanin'),
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                  ],
+                ),
+                NormalTextView(
+                  text: "salam",
+                  onClick: () {},
+                )
+              ],
+            ),
+          ),
           //footer
         ],
       ),
