@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class ExploreGrid extends StatefulWidget {
   final String imageUrl;
-
   ExploreGrid({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
