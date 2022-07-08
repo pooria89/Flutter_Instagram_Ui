@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:pooria50/widget/custom_textview.dart';
 
+import '../../widget/main/bubble_stories.dart';
+
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
+
+  final List people = [
+    "pooria50",
+    "fateme4",
+    "r.hatami",
+    "saberi.m",
+    "majid.3",
+    "nima_43",
+    "saba32874",
+    "arabi.qw",
+    "erfan43",
+    "somayeh3"
+  ];
 
   final List<String> imagesList = [
     "https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg",
@@ -35,7 +50,7 @@ class ProfileScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // adad ha
+          // header
           Container(
               margin: EdgeInsets.all(10),
               child: Row(
@@ -101,26 +116,33 @@ class ProfileScreen extends StatelessWidget {
           // dokmeha
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
-            child: Column(
-              children: [
-                CustomTextView(
-                  text: "آشنایی با انواع کافه و رستوران های شهر تهران",
-                  size: 15,
-                  color: Colors.black87,
-                  fontFamily: 'BNazanin',
-                  fontWeight: FontWeight.bold,
-                ),
-                CustomTextView(
-                  text: "اولین و تخصصی ترین پیج کافه گردی تهران",
-                  size: 15,
-                  color: Colors.black87,
-                  fontFamily: 'BNazanin',
-                  fontWeight: FontWeight.bold,
-                ),
-              ],
+            child: Center(
+              child: Column(
+                children: [
+                  CustomTextView(
+                    text: "کافه گردی | رستوران گردی",
+                    size: 16,
+                    color: Colors.black,
+                    fontFamily: 'BNazanin',
+                    fontWeight: FontWeight.bold,
+                  ),
+                  CustomTextView(
+                    text: "آشنایی با انواع کافه و رستوران های شهر تهران",
+                    size: 14,
+                    color: Colors.black87,
+                    fontFamily: 'BNazanin',
+                  ),
+                  CustomTextView(
+                    text: "اولین و تخصصی ترین پیج کافه گردی تهران",
+                    size: 14,
+                    color: Colors.black87,
+                    fontFamily: 'BNazanin',
+                  ),
+                ],
+              ),
             ),
           ),
-          // highlight story
+          // Buttons
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
             child: Column(
@@ -128,7 +150,7 @@ class ProfileScreen extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shadowColor: Colors.grey,
-                    minimumSize: Size.fromHeight(
+                    minimumSize: const Size.fromHeight(
                         40), // fromHeight use double.infinity as width and 40 is the height
                   ),
                   onPressed: () {},
@@ -144,8 +166,9 @@ class ProfileScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
+                      flex: 1,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 2, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 6, 0),
                         child: FlatButton(
                           shape: RoundedRectangleBorder(
                               side: BorderSide(color: Colors.grey),
@@ -160,11 +183,11 @@ class ProfileScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      flex: 1,
                     ),
                     Expanded(
+                      flex: 1,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 2, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 6, 0),
                         child: FlatButton(
                           shape: RoundedRectangleBorder(
                               side: BorderSide(color: Colors.grey),
@@ -179,12 +202,12 @@ class ProfileScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      flex: 1,
                     ),
                     Expanded(
+                      flex: 1,
                       child: FlatButton(
                         shape: RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.grey),
+                            side: const BorderSide(color: Colors.grey),
                             borderRadius: BorderRadius.circular(4.0)),
                         color: Colors.white,
                         onPressed: () {},
@@ -196,18 +219,59 @@ class ProfileScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      flex: 1,
                     ),
                   ],
                 ),
-                CustomTextView(
-                  text: "salam",
-                  onClick: () {},
-                )
+                // Story Highlights
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                  child: Container(
+                    height: 130,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: people.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 5, 5, 0),
+                            child: Row(
+                              children: [
+                                BubbleStories(
+                                  username: people[index],
+                                  url: imagesList[index],
+                                ),
+                              ],
+                            ),
+                          );
+                        }),
+                  ),
+                ),
               ],
             ),
           ),
           //footer
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
+            child: Container(
+              height: 200,
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 2.0, vertical: 2.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('asset/1.jpeg'),
+                            fit: BoxFit.fill),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          )
         ],
       ),
     );

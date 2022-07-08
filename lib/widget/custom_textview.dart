@@ -23,7 +23,7 @@ class CustomTextView extends StatelessWidget {
     return Container(
       child: onClick == null
           ? Text(
-        text!,
+              text!,
               style: TextStyle(
                   fontSize: size,
                   fontWeight: fontWeight,
