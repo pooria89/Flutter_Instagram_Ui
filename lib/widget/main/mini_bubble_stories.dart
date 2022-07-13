@@ -49,7 +49,7 @@ class _MiniBubbleStoriesState extends State<MiniBubbleStories>
             turns: reverse,
             child: DashedCircle(
               gapSize: gap.value,
-              dashes: 40,
+              dashes: 20,
               color: Colors.pinkAccent,
               child: RotationTransition(
                 turns: reverse,

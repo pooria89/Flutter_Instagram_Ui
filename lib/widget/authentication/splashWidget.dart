@@ -7,12 +7,14 @@ class SplashWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-      duration: 1000,
-      splash: 'asset/3.jpg',
-      splashIconSize: double.maxFinite,
-      nextScreen: const RegisterScreen(),
-      splashTransition: SplashTransition.decoratedBoxTransition,
+    return MaterialApp(
+      home: AnimatedSplashScreen(
+        duration: 1000,
+        splash: 'asset/splash.png',
+        splashIconSize: double.maxFinite,
+        nextScreen: const RegisterScreen(),
+        splashTransition: SplashTransition.decoratedBoxTransition,
+      ),
     );
   }
 }

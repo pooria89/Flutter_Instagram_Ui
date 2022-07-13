@@ -177,9 +177,20 @@ class _PostWidgetState extends State<PostWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Row(
             children: [
-              MiniBubbleStories(url: imagesList.first),
-              MiniBubbleStories(url: imagesList[1]),
-              MiniBubbleStories(url: imagesList[2]),
+              Stack(
+                textDirection: TextDirection.rtl,
+                children: [
+                  MiniBubbleStories(url: imagesList.first),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    child: MiniBubbleStories(url: imagesList[1]),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
+                    child: MiniBubbleStories(url: imagesList[2]),
+                  ),
+                ],
+              ),
               SizedBox(
                 width: 5,
               ),
