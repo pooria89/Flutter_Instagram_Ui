@@ -74,24 +74,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               SizedBox(height: 15),
-              Padding(
-                padding: EdgeInsets.only(left: 12.0, right: 12.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: TextField(
-                      controller: _neighbourhoodController,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          hintText: "Neighbourhood", border: InputBorder.none),
-                    ),
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 12.0, right: 12.0),
+              //   child: Container(
+              //     decoration: BoxDecoration(
+              //         color: Colors.grey[200],
+              //         border: Border.all(color: Colors.white),
+              //         borderRadius: BorderRadius.circular(10)),
+              //     child: Padding(
+              //       padding: EdgeInsets.only(left: 20),
+              //       child: TextField(
+              //         controller: _neighbourhoodController,
+              //         obscureText: true,
+              //         decoration: InputDecoration(
+              //             hintText: "Neighbourhood", border: InputBorder.none),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: 15),
               GestureDetector(
                 onTap: () {

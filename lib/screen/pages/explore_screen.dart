@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pooria50/widget/custom_textview.dart';
+import 'package:pooria50/widget/reel_side_action_bar.dart';
 
-import '../../widget/custom_textview.dart';
-import '../../widget/main/explore_grid.dart';
+// import '../../widget/custom_textview.dart';
+// import '../../widget/main/explore_grid.dart';
 
 class ExploreScreen extends StatelessWidget {
   ExploreScreen({Key? key}) : super(key: key);
@@ -19,29 +21,98 @@ class ExploreScreen extends StatelessWidget {
     "https://img.freepik.com/free-photo/close-up-hands-barista-make-latte-coffee-art-paint_1150-12161.jpg?w=1380&t=st=1656925517~exp=1656926117~hmac=d49295f5889876fa79e8db74cac25c0a279065be9f5966156d1ff1513cdd8c8c"
   ];
 
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         automaticallyImplyLeading: false,
+//         backgroundColor: Colors.grey[300],
+//         title: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           children: [
+//             CustomTextView(
+//               text: "Explore ...",
+//               size: 20,
+//               color: Colors.black,
+//               fontFamily: 'BNazanin',
+//             ),
+//             Icon(
+//               Icons.search,
+//               color: Colors.grey[800],
+//             )
+//           ],
+//         ),
+//       ),
+//       body: ExploreGrid(imageUrl: "asset/234.png"),
+//     );
+//   }
+// }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.grey[300],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomTextView(
-              text: "Explore ...",
-              size: 20,
-              color: Colors.black,
-              fontFamily: 'BNazanin',
+        backgroundColor: Colors.black,
+        elevation: 0,
+        centerTitle: false,
+        title: CustomTextView(text: "Reels"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.photo_camera_outlined,
+              color: Colors.white,
             ),
-            Icon(
-              Icons.search,
-              color: Colors.grey[800],
-            )
-          ],
-        ),
+          ),
+        ],
       ),
-      body: ExploreGrid(imageUrl: "asset/234.png"),
+      body: PageView.builder(
+          scrollDirection: Axis.vertical,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          'https://picsum.photos/id/${index + 1047}/800/1080'))),
+              child: Center(
+                child: Stack(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                        colors: [Colors.black, Colors.transparent],
+                        begin: Alignment(0, -5.1),
+                        end: Alignment(0, 0.1),
+                      )),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Flexible(
+                                flex: 14,
+                                child: Container(
+                                  height: 100,
+                                  color: Colors.yellow,
+                                )),
+                            Flexible(
+                                flex: 2,
+                                child: ReelSideActionBar(),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            );
+          }),
     );
   }
 }
