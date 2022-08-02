@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pooria50/widget/custom_textview.dart';
+import 'package:pooria50/widget/reel_detail.dart';
 import 'package:pooria50/widget/reel_side_action_bar.dart';
 
 // import '../../widget/custom_textview.dart';
@@ -94,15 +95,10 @@ class ExploreScreen extends StatelessWidget {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
+                            Flexible(flex: 14, child: ReelDetail()),
                             Flexible(
-                                flex: 14,
-                                child: Container(
-                                  height: 100,
-                                  color: Colors.yellow,
-                                )),
-                            Flexible(
-                                flex: 2,
-                                child: ReelSideActionBar(),
+                              flex: 2,
+                              child: ReelSideActionBar(),
                             )
                           ],
                         )

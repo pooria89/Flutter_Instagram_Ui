@@ -36,7 +36,7 @@ dependencies:
   searchfield:
   dashed_circle:  ^0.0.1
   carousel_slider:
-
+  expandable_text:
 
 
   # The following adds the Cupertino Icons font to your application.
