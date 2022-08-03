@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widget/authentication/splashWidget.dart';
+import '../../../widget/splash_widget.dart';
 
 void main() {
   runApp(const MyApp());

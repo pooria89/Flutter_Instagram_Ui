@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/screen/pages/explore_screen.dart';
-import 'package:pooria50/screen/pages/heart_screen.dart';
-import 'package:pooria50/screen/pages/home_screen.dart';
-import 'package:pooria50/screen/pages/profile_screen.dart';
-import 'package:pooria50/screen/pages/publish_screen.dart';
+import 'package:pooria50/ui/pages/explore_screen.dart';
+import 'package:pooria50/ui/pages/heart_screen.dart';
+import 'package:pooria50/ui/pages/home_screen.dart';
+import 'package:pooria50/ui/pages/profile_screen.dart';
+import 'package:pooria50/ui/pages/publish_screen.dart';
+
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

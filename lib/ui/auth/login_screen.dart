@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pooria50/screen/auth/register_screen.dart';
-import 'package:pooria50/screen/main_screen.dart';
+import 'package:pooria50/ui/auth/register_screen.dart';
+import 'package:pooria50/ui/main_screen.dart';
 
 import '../../helper/sql_helper.dart';
 import '../../widget/custom_textview.dart';
