@@ -7,14 +7,13 @@ class ReelDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       child: Column(
         children: [
           ListTile(
             dense: true,
             minLeadingWidth: 0,
             horizontalTitleGap: 12,
-            title: Text("Hello - Follow"),
+            title: Text("Hello - Follow",style: TextStyle(color: Colors.white),),
             leading: CircleAvatar(
               radius: 14,
               backgroundImage: NetworkImage(
@@ -24,8 +23,8 @@ class ReelDetail extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: ExpandableText(
-              "This is instagram Reel",
-              style: TextStyle(fontSize: 15, color: Colors.black),
+              "This is instagram Reel This is instagram Reel This is instagram Reel This is instagram Reel This is instagram Reel This is instagram Reel This is instagram Reel",
+              style: TextStyle(fontSize: 15, color: Colors.white),
               expandText: "more",
               collapseText: "less",
               expandOnTextTap: true,
@@ -33,7 +32,14 @@ class ReelDetail extends StatelessWidget {
               maxLines: 1,
               linkColor: Colors.grey,
             ),
-          )
+          ),
+          ListTile(
+            dense: true,
+            minLeadingWidth: 0,
+            horizontalTitleGap: 5,
+            title: Text("music- title",style: TextStyle(color: Colors.white),),
+            leading: Icon(Icons.graphic_eq_outlined , size: 16, color: Colors.white,)
+          ),
         ],
       ),
     );
