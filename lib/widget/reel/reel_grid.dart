@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ExploreGrid extends StatefulWidget {
+class ReelGrid extends StatefulWidget {
   final String imageUrl;
-  ExploreGrid({Key? key, required this.imageUrl}) : super(key: key);
+  ReelGrid({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
-  State<ExploreGrid> createState() => _ExploreGridState();
+  State<ReelGrid> createState() => _ReelGridState();
 }
 
-class _ExploreGridState extends State<ExploreGrid> {
+class _ReelGridState extends State<ReelGrid> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(

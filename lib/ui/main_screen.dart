@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pooria50/ui/pages/explore_screen.dart';
+import 'package:pooria50/ui/pages/reel_screen.dart';
 import 'package:pooria50/ui/pages/heart_screen.dart';
 import 'package:pooria50/ui/pages/home_screen.dart';
 import 'package:pooria50/ui/pages/profile_screen.dart';
@@ -24,6 +25,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final _widgetOptions = [
     HomeScreen(),
+    ReelScreen(),
     ExploreScreen(),
     PublishScreen(),
     HeartScreen(),
@@ -40,10 +42,10 @@ class _MainScreenState extends State<MainScreen> {
         onTap: _navigateBottomTabBar,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: "reel"),
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: "explore"),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: "publish"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.heart_broken_rounded), label: "heart"),
+          BottomNavigationBarItem(icon: Icon(Icons.heart_broken_rounded), label: "heart"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
         ],
       ),
