@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../widget/splash_widget.dart';
 
 void main() {
