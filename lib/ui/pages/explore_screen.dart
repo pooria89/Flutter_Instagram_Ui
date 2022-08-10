@@ -52,7 +52,8 @@ class ExploreScreen extends StatelessWidget {
                           caption: "This is the best Page",
                           url:
                               "https://picsum.photos/id/${1047 + index}/400/${index % 20 == 2 ? 805 : 400}",
-                          postedTimeAgo: "10 min ago"));
+                          postedTimeAgo: "10 min ago",
+                          postId: "10"));
                 },
                 itemCount: 200)
           ],

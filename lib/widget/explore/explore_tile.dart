@@ -7,6 +7,14 @@ class ExploreTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Image(image: NetworkImage(post.url)));
+    return Stack(
+      alignment: Alignment.topRight,
+      children: [
+        Container(child: Image(image: NetworkImage(post.url))),
+      Container(
+        padding: EdgeInsets.all(8),
+        child: Icon(post.postId == "0" || post.postId == "10" ? Icons.collections_rounded : null , color: Colors.white,),
+      )],
+    );
   }
 }
