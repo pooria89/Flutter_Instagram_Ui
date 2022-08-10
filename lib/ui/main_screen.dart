@@ -50,6 +50,13 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.smart_display), label: "publish"),
           BottomNavigationBarItem(icon: Icon(Icons.heart_broken_rounded), label: "heart"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
+          BottomNavigationBarItem(icon: InkWell(
+            child: CircleAvatar(
+              backgroundColor: Colors.black,
+              radius: 20,
+              backgroundImage: NetworkImage('https://i2-prod.mirror.co.uk/incoming/article27521542.ece/ALTERNATES/s1200d/0_Lionel-Messi.jpg'),
+            ),
+          ), label: "profile"),
         ],
       ),
     );
