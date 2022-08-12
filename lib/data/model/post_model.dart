@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Post {
   final String title;
   final String location;
@@ -14,6 +12,5 @@ class Post {
       required this.caption,
       required this.url,
       required this.postedTimeAgo,
-      required this.postId
-      });
+      required this.postId});
 }

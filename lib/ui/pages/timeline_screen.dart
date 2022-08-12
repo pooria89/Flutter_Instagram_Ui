@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pooria50/data/mock/mock.dart';
 import 'package:pooria50/widget/timeline/add_story_card.dart';
 import 'package:pooria50/widget/timeline/custom_timeline_appbar.dart';
+import 'package:pooria50/widget/timeline/post_card.dart';
 
 import '../../widget/timeline/story_card.dart';
 
@@ -37,7 +38,13 @@ class TimeLineScreen extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+          return PostCard(
+            post: posts[index],
+          );
+        }, childCount: posts.length))
       ],
     );
   }
