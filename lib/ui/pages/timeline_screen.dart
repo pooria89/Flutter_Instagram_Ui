@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pooria50/data/mock/mock.dart';
 import 'package:pooria50/widget/timeline/add_story_card.dart';
 import 'package:pooria50/widget/timeline/custom_timeline_appbar.dart';
 
@@ -18,14 +19,16 @@ class TimeLineScreen extends StatelessWidget {
               Container(
                 height: 100,
                 child: ListView.builder(
-                    itemCount: 10,
+                    itemCount: stories.length + 1,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
                         color: Colors.white,
                         width: 80,
                         padding: EdgeInsets.symmetric(vertical: 5),
-                        child: index == 0 ? AddStoryCard() : StoryCard(),
+                        child: index == 0
+                            ? AddStoryCard()
+                            : StoryCard(story: stories[index - 1]),
                       );
                     }),
               ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pooria50/data/model/story_model.dart';
 
 class StoryCard extends StatelessWidget {
-  const StoryCard({Key? key}) : super(key: key);
+  const StoryCard({Key? key, required this.story}) : super(key: key);
+
+  final Story story;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +24,14 @@ class StoryCard extends StatelessWidget {
             backgroundColor: Colors.black,
             radius: 32,
             child: CircleAvatar(
+              radius: 30,
               backgroundColor: Colors.black,
+              backgroundImage: NetworkImage(story.url),
             ),
           ),
         ),
         Spacer(),
-        Text("username")
+        Text(story.username)
       ],
     );
   }
