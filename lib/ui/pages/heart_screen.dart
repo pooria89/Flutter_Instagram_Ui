@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/widget/main/activity_news.dart';
 
 import '../../widget/custom_textview.dart';
 
@@ -20,9 +19,7 @@ class HeartScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      body: Column(
-        children: [ActivityNews(), ActivityNews(), ActivityNews()],
-      ),
+      body: Text("dshbvds"),
     );
   }
 }

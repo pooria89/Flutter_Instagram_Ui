@@ -13,6 +13,31 @@ final List<Story> stories = [
       url:
           'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
       username: "parsa5"),
+  Story(
+      id: "1",
+      url:
+      'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
+      username: "parsa5"),
+  Story(
+      id: "1",
+      url:
+      'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
+      username: "parsa5"),
+  Story(
+      id: "1",
+      url:
+      'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
+      username: "parsa5"),
+  Story(
+      id: "1",
+      url:
+      'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
+      username: "parsa5"),
+  Story(
+      id: "1",
+      url:
+      'https://image.stern.de/30669284/t/8J/v2/w960/r1.7778/-/20--fc-barcelona--messi-liess-beim-barca-abschied-eine-auszeichnung-in-der-kabine-zurueck--aufmacher-.jpg',
+      username: "parsa5"),
 ];
 
 final List<Post> posts = [
@@ -31,6 +56,39 @@ final List<Post> posts = [
       postedTimeAgo: "11 min ago",
       postId: "2"),
   Post(
+      title: "title7",
+      location: "araq",
+      caption: "coffee",
+      url: 'https://picsum.photos/id/1062/400/400',
+      postedTimeAgo: "8 min ago",
+      postId: "3"),
+  Post(
+      title: "title7",
+      location: "araq",
+      caption: "coffee",
+      url: 'https://picsum.photos/id/1062/400/400',
+      postedTimeAgo: "8 min ago",
+      postId: "3"),
+  Post(
+      title: "title7",
+      location: "araq",
+      caption: "coffee",
+      url: 'https://picsum.photos/id/1062/400/400',
+      postedTimeAgo: "8 min ago",
+      postId: "3"),
+  Post(
+      title: "title7",
+      location: "araq",
+      caption: "coffee",
+      url: 'https://picsum.photos/id/1062/400/400',
+      postedTimeAgo: "8 min ago",
+      postId: "3"), Post(
+      title: "title7",
+      location: "araq",
+      caption: "coffee",
+      url: 'https://picsum.photos/id/1062/400/400',
+      postedTimeAgo: "8 min ago",
+      postId: "3"), Post(
       title: "title7",
       location: "araq",
       caption: "coffee",
