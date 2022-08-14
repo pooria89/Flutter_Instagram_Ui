@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pooria50/ui/pages/splash/splash_screen.dart';
+import 'package:pooria50/ui/pages/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
