@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pooria50/ui/pages/explore_screen.dart';
-import 'package:pooria50/ui/pages/reel_screen.dart';
-import 'package:pooria50/ui/pages/heart_screen.dart';
-import 'package:pooria50/ui/pages/home_screen.dart';
 import 'package:pooria50/ui/pages/profile_screen.dart';
-import 'package:pooria50/ui/pages/publish_screen.dart';
+import 'package:pooria50/ui/pages/reel_screen.dart';
 import 'package:pooria50/ui/pages/timeline_screen.dart';
-
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -26,11 +22,11 @@ class _MainScreenState extends State<MainScreen> {
 
   final _widgetOptions = [
     TimeLineScreen(),
-    HomeScreen(),
-    ReelScreen(),
+    // HomeScreen(),
     ExploreScreen(),
-    PublishScreen(),
-    HeartScreen(),
+    ReelScreen(),
+    // PublishScreen(),
+    // HeartScreen(),
     ProfileScreen()
   ];
 
@@ -43,12 +39,16 @@ class _MainScreenState extends State<MainScreen> {
         currentIndex: _selectedIndex,
         onTap: _navigateBottomTabBar,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "timeline"),
-          BottomNavigationBarItem(icon: Icon(Icons.shop_2_outlined), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.tv_outlined), label: "reel"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: "timeline"),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.shop_2_outlined), label: "home"),
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: "explore"),
-          BottomNavigationBarItem(icon: Icon(Icons.smart_display), label: "publish"),
-          BottomNavigationBarItem(icon: Icon(Icons.heart_broken_rounded), label: "heart"),
+          BottomNavigationBarItem(icon: Icon(Icons.tv_outlined), label: "reel"),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.smart_display), label: "publish"),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.heart_broken_rounded), label: "heart"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
         ],
       ),
